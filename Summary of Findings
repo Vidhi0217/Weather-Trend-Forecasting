@@ -1,0 +1,26 @@
+Data Cleaning and Preparation
+The GlobalWeatherRepository.csv dataset was loaded, and the last_updated column was successfully converted to datetime objects, handling any invalid entries.
+Missing numerical values were imputed using their respective medians, and rows with unresolvable missing data were dropped, resulting in a clean dataset for analysis.
+
+Exploratory Data Analysis (EDA)
+Temperature Trend: The line plot of temperature_celsius over time showed the general variations in temperature. Without specific timeframes, it's hard to deduce strong seasonal patterns from this plot alone, but it provides a good overview of the temperature fluctuations.
+Precipitation Patterns: The precip_mm line plot indicated periods of rainfall. Similar to temperature, longer-term data would be needed for deeper seasonal analysis.
+
+Correlation Heatmap: The heatmap revealed correlations between key weather variables:
+temperature_celsius showed a negative correlation with humidity and a slight positive correlation with wind_kph and pressure_mb.
+humidity had a positive correlation with precip_mm.
+These correlations provide insights into how different weather parameters interact.
+
+Basic Forecasting Model (Linear Regression)
+A simple Linear Regression model was trained to predict temperature_celsius using time_idx (elapsed time in hours) as the sole feature.
+
+Model Performance:
+Mean Absolute Error (MAE): 8.47
+Root Mean Squared Error (RMSE): 10.68
+The MAE of 8.47 and RMSE of 10.68 suggest that the simple linear model provides a basic forecast, but there's significant room for improvement. The model's coefficients and intercept indicate the general linear trend captured. The plot of actual vs. predicted temperatures visually confirmed the model's ability to capture the general trend but also highlighted its limitations in predicting precise temperature fluctuations.
+
+Next Steps:
+Further model development could include more sophisticated time-series models (e.g., ARIMA, Prophet, or deep learning models).
+Feature engineering from last_updated (e.g., day of week, hour of day, month, year) could significantly improve model accuracy.
+Incorporating other relevant weather variables as features (e.g., humidity, wind_kph, pressure_mb) would also likely enhance predictive power.
+Consider more advanced outlier detection and handling techniques.
