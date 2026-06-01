@@ -1,6 +1,8 @@
 README.md
 Weather Trend Forecasting using Global Weather Repository
 
+PM Accelerator Mission
+By making industry-leading tools and education available to individuals from all backgrounds, we level the playing field for future PM leaders. This is the PM Accelerator motto, as we grant aspiring and experienced PMs what they need most – Access. We introduce you to industry leaders, surround you with the right PM ecosystem, and discover the new world of AI product management skills.
 
 Overview
 This project provides a basic analysis and forecasting model for weather trends using the "Global Weather Repository" dataset. The workflow covers data loading, cleaning, exploratory data analysis (EDA), and the implementation of a simple linear regression model for temperature forecasting.
